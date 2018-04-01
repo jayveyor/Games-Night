@@ -1,0 +1,263 @@
+@import "partials/_normalize.scss";
+@import "partials/_variables.scss";
+@import "partials/_mixins.scss";
+@import "partials/_datepicker.scss";
+@import "partials/_autocomplete.scss";
+
+.homeWrap {
+    width: 100%;
+    max-width: 100%;
+    height:100vh;
+}
+
+.userPopup {
+    position: absolute;
+    width:100%;
+    background-image: url(/hypnotize.png);
+    height: calc(100% - 170px);
+    z-index: 4;
+}
+.userPopup .flex {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.userPopup p,
+.userPopup h3,
+.userPopup button {
+    padding: 10px 0px;
+}
+.headline {
+    height: 100px;
+    font-size: 2rem;
+}
+.showPopup {
+    font-size: 2.5rem;    
+    padding: 20px; 
+}
+.topBar {
+    background-image: url(/hypnotize.png);
+    
+}
+.homePage {
+    height: calc(100% - 170px);
+    font-size: 5rem;
+}
+.homePage h2 {
+    font-size: 3rem;
+}
+
+.mainTitle {
+position: absolute;
+    right: 35%;
+    top: 20px;
+}
+
+.mainTitle h1 {
+        font-size: 4.25rem;
+        color: white;
+        padding: 20px;
+        text-shadow: 0 1px 0 #ccc,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0, 0, 0, .1),
+        0 0 5px rgba(0, 0, 0, .1),
+        0 1px 3px rgba(0, 0, 0, .3),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .25),
+        0 10px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
+        background-color: black;
+}
+
+.newEvent,
+.joinEvent {
+    height: 75%;
+    background-color: grey;
+    margin: 0 auto;
+    width: 500px;
+}
+
+.gameChoice img {
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+}
+
+.userProfile img {
+    width: 125px;
+}
+header .flex {
+    justify-content: space-between;
+}
+
+.userProfile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    height: 170px;
+    max-width: 350px;
+}
+
+.userProfile button {
+    align-self: flex-end;
+    width: 125px;
+    height: 45px;
+    
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.homePage .flex {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.eventHeader {
+    width: 100%;
+}
+.newEvent .flex,
+.joinEvent .flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.event .flex {
+    flex-direction: column;
+}
+.gamesPicker .flex {
+    flex-direction: row;
+}
+.gameSelects .flex {
+    flex-direction: column;
+    position: relative;
+}
+
+.gameSelects form {
+    position: absolute;
+    right:0;
+}
+
+.gameChoice .flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gameInfo {
+width: 90%;
+text-align: left;
+}
+
+.gameInfo .grid {
+    display: grid;
+    grid-template-areas: 
+    "img playtime players"
+    "img rating difficulty";
+}
+.gameInfo img {
+    grid-area: img;
+}
+.playTime {
+    grid-area: playtime;
+    padding-top: 30px;
+}
+.players {
+    grid-area: players;
+    padding-top: 30px;
+}
+.rating {
+    grid-area: rating;
+}
+.difficulty {
+    grid-area: difficulty;
+}
+
+.event {
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 70%;
+    max-width: 700px;
+}
+
+
+.event h2 {
+    font-size: 2.5rem;
+   margin: 10px auto;
+}
+
+.event input {
+    width: 100%;
+    height: 57px;
+    padding: 10px 20px;
+    font-weight: 300;
+    border: 1px solid #aaa;
+}
+
+.event p {
+    margin: 10px auto;
+}
+
+.gameSelects h2 {
+    font-size: 1.7
+}
+.gameSelects {
+    background-color: grey;
+    margin-bottom: 100px;
+}
+.eventButton {
+    height: 70px;
+    font-size: 2.5rem;
+    margin: 20px 0px 5px;
+    width: 100%;
+}
+
+@media (max-width: 1000px) {
+    .mainTitle {
+        position: inherit;
+    }
+.homePage .flex {
+    height: calc(100% - 118px);
+}
+.newEvent .flex,
+.joinEvent .flex {
+    height: 100%;
+}
+.newEvent,
+.joinEvent {
+    height: 100%;
+    width: 50%;
+}
+}
+@media (max-width: 600px) {
+    .homePage .flex {
+        flex-direction: column;
+    }
+    .newEvent,
+    .joinEvent {
+        width: 100%;
+        height: 50%;
+    }
+    .event {
+        width: 100%;
+    }
+    .userProfile {
+        max-width: 300px;
+    }
+    .header.flex {
+        justify-content: inherit;
+    }
+
+}
+
